@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>あしだ　スタートページ</title>
+</head>
+<body>
+    <!--<p class="maintit">A・SI・DA Start Page</p>
+    <p>Create by ASIDA</p>-->
+    <img src="ASIDA.png">
+    <hr>
+    <marquee><a class="maeoki" id="Mtext"></a></marquee>
+    <hr>
+    <input class="searchbox" id="TextBox1" value="">
+    <button class="sebutton" onclick="Sear()">検索</button>
+    <!--<button onclick="MOJI()">test</button>-->
+
+
+
+<script>
+    document.addEventListener('keypress',keypress_ivent);
+    onload(MOJI())
+
+    function keypress_ivent(e) {
+	    if(e.code === 'Enter'){
+	        //Enterキーが押された時の処理
+            Sear();
+	    }
+	    return false; 
+    }
+function Sear(){
+    var naiyou = document.getElementById('TextBox1').value;
+    if(naiyou == ""){
+        alert("何か入れて検索します。");
+        return;
+    }
+
+    window.location.href=("https://www.google.com/search?q="+ naiyou +"")
+    //console.log(naiyou)
+}
+
+function MOJI(){
+    var kousin = "更新情報:2022/12/06 12:07 作成。 2022/12/06 13:18 改良。";
+    let Tnum = Math.floor(Math.random() * 4) + 1;
+    switch (Tnum) {
+        case 1 :
+          var temoji = "「時は金なり」時間は大切です。限られた時間の中でいかに生産性を求められるかが勝負です。「ASIDA StartPage」はそんなあなたを応援します.         ";
+        break;
+
+        case 2 :
+            var temoji =" A・si・da からのひとこと：「やぁ！パソコンの前のボーイ・ハニーたち！　使ってくれてありがとな！」       ";
+        break;
+
+        case 3 :
+            var temoji = "「あなたにジャスト。それが、Asidaクオリティー。」どーだ！かっこいいだろ！？（スベっている）       ";
+        break;
+
+        case 4 :
+            var temoji = "作業お疲れ様です。たまには休憩はいかがでしょうか？ 　　　　　　　　　 あしだの家で。          ";
+        break;
+
+        default:
+            var temoji = "Error !!";
+        break;
+    }
+document.getElementById('Mtext').innerText = ""+ temoji +""+ kousin +""
+} 
+</script>
+</body>
+</html>
+<style>
+    body{
+        text-align: center;
+        background-color: aliceblue;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .maeoki{
+        font-size: 26px;
+        color:blue;
+    }
+    .maintit{
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 52px;
+
+    }
+    .searchbox{
+        width: 400px;
+        height: 55px;
+        font-size: 40px;
+    }
+    .sebutton{
+        font-size: 40px;
+        width: 120px;
+        height: 60px;
+    }
+</style>
