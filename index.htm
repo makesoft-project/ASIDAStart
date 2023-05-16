@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>あしだ　スタートページ</title>
+    <title>ASIDAスタートページ</title>
 </head>
 <body>
     <!--<p class="maintit">A・SI・DA Start Page</p>
     <p>Create by ASIDA</p>-->
     <img src="ASIDA.png">
+    <p>ASIDAスタートページは個人情報を一切取得しません。だから安心。（検索エンジンは別です）</p>
     <hr>
     <marquee><a class="maeoki" id="Mtext"></a></marquee>
     <hr>
@@ -42,7 +43,7 @@ function Sear(){
 }
 
 function MOJI(){
-    var kousin = "更新情報:2022/12/06 12:07 作成。 2022/12/06 13:18 改良。";
+    var kousin = "更新情報:2022/12/06 12:07 作成。 2023/05/17 0:28 リニューアル。";
     let Tnum = Math.floor(Math.random() * 4) + 1;
     switch (Tnum) {
         case 1 :
@@ -58,7 +59,7 @@ function MOJI(){
         break;
 
         case 4 :
-            var temoji = "作業お疲れ様です。たまには休憩はいかがでしょうか？ 　　　　　　　　　 あしだの家で。          ";
+            var temoji = "作業お疲れ様です。たまには休憩はいかがでしょうか？";
         break;
 
         default:
@@ -68,7 +69,16 @@ function MOJI(){
 document.getElementById('Mtext').innerText = ""+ temoji +""+ kousin +""
 } 
 </script>
-</body>
+        <hr>
+        <h1>作者のお気に入りのページ</h1>
+            <a href="https://betawiki.net/wiki/Main_Page">BetaWiki</a><br>
+            <a href="https://youtube.com">Youtube</a><br>
+
+        <hr>
+            <p>このサイトの元の<a href="https://github.com/makesoft-project/ASIDAStart">Githubリポジトリ</a></p>
+        <hr>
+            <p>makesoft-project 2022-2023</p>
+    </body>
 </html>
 <style>
     body{
